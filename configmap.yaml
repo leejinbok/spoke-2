@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  # The Hub's Kustomize will automatically prefix this (e.g., alpha-web-html)
+  name: web-html 
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Spoke 1</title>
+      <style>
+        body { font-family: system-ui, sans-serif; text-align: center; padding: 50px; background: #f4f4f9; }
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: inline-block; }
+        h1 { color: #333; }
+        p { color: #666; }
+      </style>
+    </head>
+    <body>
+      <div class="card">
+        <h1>Welcome to THE Spoke 1!!! 🚀</h1>
+        <p>This application is deployed using GitOps to demonstrate a hub and spoke architecture.</p>
+      </div>
+    </body>
+    </html>

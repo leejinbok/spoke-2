@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-app
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+      containers:
+      - name: application
+        image: nginx:1.25-alpine
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        # 2. Mount the volume into the container's web directory
+        volumeMounts:
+        - name: html-volume
+          mountPath: /usr/share/nginx/html
+      
+      # 1. Define the volume using the ConfigMap we created
+      volumes:
+      - name: html-volume
+        configMap:
+          name: web-html
