@@ -18,7 +18,7 @@ data:
     </head>
     <body>
       <div class="card">
-        <h1>Welcome to THE Spoke 1!!! 🚀</h1>
+        <h1>Welcome to Spoke 2!!! 🚀</h1>
         <p>This application is deployed using GitOps to demonstrate a hub and spoke architecture.</p>
       </div>
     </body>
