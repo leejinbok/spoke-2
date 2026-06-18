@@ -19,11 +19,11 @@ spec:
         - containerPort: 80
         resources:
           requests:
-            cpu: "250m"
-            memory: "256Mi"
+            cpu: "100m"
+            memory: "128Mi"
           limits:
-            cpu: "500m"
-            memory: "512Mi"
+            cpu: "100m"
+            memory: "250Mi"
         # 2. Mount the volume into the container's web directory
         volumeMounts:
         - name: html-volume
