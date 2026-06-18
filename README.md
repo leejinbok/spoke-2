@@ -1,3 +1,1 @@
-# spoke-1
-# spoke-1
-# spoke-2
+# This is a repo created to demonstrate a spoke
